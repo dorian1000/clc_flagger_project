@@ -5,3 +5,4 @@ The aim of this project is to analyze the progressive delivery Kubernetes operat
 We will highlight their properties, functionality, pro, cons, and their differences. 
 
 Additionally, we will create a tutorial highlighting their usage. 
+
