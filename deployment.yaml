@@ -8,6 +8,9 @@ spec:
       app: initdeployment
   template:
     metadata:
+      annotations:
+        prometheus.io/scrape: "true"
+        prometheus.io/port: "9899"
       labels:
         app: initdeployment
     spec:
