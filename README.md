@@ -96,7 +96,7 @@ The install command automatically creates the namespace  `istio-system`.
     kubectl label namespace test istio-injection=enabled
 ```
 
-## Apply Resource files
+##  Apply Resource files
 
 ```source
     kubectl apply -f deployment.yaml -n test
@@ -104,7 +104,7 @@ The install command automatically creates the namespace  `istio-system`.
     kubectl apply -f hpa.yaml -n test
 ```
 
-## Load Tester
+##  Load Tester
 
 #### Service to generate request during canary analysis
 ```source
@@ -117,7 +117,7 @@ The install command automatically creates the namespace  `istio-system`.
     kubectl apply -f canary.yaml -n test
 ```
 
-### Verify deployments & pods
+## Verify deployments & pods
 
 ```source
     kubectl get deployments -n test
