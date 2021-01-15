@@ -240,7 +240,7 @@ kubectl -n istio-system port-forward svc/flagger-grafana 3000:80
 
 https://localhost:3000
 
-see #refChapter for login credentials
+see [here](https://github.com/dorian1000/clc_flagger_project#install-grafana-in-the-istio-system-namespace) for login credentials
 
 In the Grafana UI. Click `Add new datasource`. You can find the prometheus url with, e.g. 10.0.84.211:9090
 
