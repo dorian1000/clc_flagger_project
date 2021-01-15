@@ -128,7 +128,7 @@ Service to generate request during canary analysis
 
 ![alt text](https://github.com/dorian1000/clc_flagger_project/blob/main/images/deployments_ns_test.png)
 
-Check for running pods, if one or more pods are on status pendin see #refLearnings.
+Check for running pods, if one or more pods are on status pendin see #https://github.com/dorian1000/clc_flagger_project/blob/main/doc/README.md.
 
 ```source
     kubectl get pods -n test
