@@ -94,13 +94,33 @@ Service to generate request during canary analysis
     kubectl apply -f canary.yaml -n test
 ```
 
-## Verify deployments
+### Verify deployments & pods
 
 ```source
     kubectl get deployments -n test
 ```
 
 ![alt text](https://github.com/dorian1000/clc_flagger_project/blob/main/images/deployments_ns_test.png)
+
+Check for running pods, if one or more pods are on status pendin see #refLearnings.
+
+```source
+    kubectl get pods -n test
+```
+
+![alt text](https://github.com/dorian1000/clc_flagger_project/blob/main/images/pods_ns_test.png)
+
+### Verify Initialization
+
+```souce
+    kubectl -n test describe canary/initdeployment
+```
+
+![alt text](https://github.com/dorian1000/clc_flagger_project/blob/main/images/describe_canary_resource.png)
+
+## Trigger Canary Deployment
+
+TBW
 
 
 
