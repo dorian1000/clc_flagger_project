@@ -101,10 +101,7 @@ Service to generate request during canary analysis
     kubectl get deployments -n test
 ```
 
-
-
-
-
+![alt text](https://github.com/dorian1000/clc_flagger_project/blob/main/images/deployments_ns_test.png)
 
 
 
