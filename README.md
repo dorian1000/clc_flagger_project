@@ -191,7 +191,11 @@ kubectl port-forward initdeployment-primary-8447855b9f-vjndc 9999:8888 -n test
 
 http://127.0.0.1:9999/
 
-![alt text](https://github.com/dorian1000/clc_flagger_project/blob/main/images/get_pods_v2_after_canary.png)
+![alt text](https://github.com/dorian1000/clc_flagger_project/blob/main/images/app_v2.png)
+
+# A/B Testing
+
+
 
 
 
