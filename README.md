@@ -41,9 +41,9 @@ Add a flagger repository to helm.
 
 ```
     helm repo list
-
-    flagger https://flagger.app
 ```
+    flagger https://flagger.app
+
 
 ### Install required Services to Kubernetes Cluster
 
@@ -76,7 +76,7 @@ The install command automatically creates the namespace  `istio-system`.
         --set password=change-me
 ```
 
-Verify installed services in the `istio-system` namespace
+Verify installed services in the `istio-system` namespace.
 
 ```
     kubectl get deploy -n istio-system
@@ -86,13 +86,13 @@ Verify installed services in the `istio-system` namespace
 
 # Deploy Demo App and Canary Resources
 
-Create `test` namespace
+Create `test` namespace.
 
 ```source
     kubectl create ns test
 ```
 
-Enable Istio sidecar injection
+Enable Istio sidecar injection.
 
 ```source
     kubectl label namespace test istio-injection=enabled
@@ -108,7 +108,7 @@ Enable Istio sidecar injection
 
 ## Load Tester
 
-Service to generate request during canary analysis
+Service to generate request during canary analysis.
 ```source
     kubectl apply -k https://github.com/fluxcd/flagger//kustomize/tester?ref=main
 ```
@@ -195,7 +195,7 @@ http://127.0.0.1:9999/
 
 # A/B Testing
 
-We upgrade our application back to version 1 with A/B Testing
+We upgrade our application back to version 1 with A/B Testing.
 
 ```
 kubectl apply -f canaryAB.yaml -n test
@@ -213,11 +213,11 @@ print the rollout progress. Wait until revision new revision is detected.
 
 ![alt text](https://github.com/dorian1000/clc_flagger_project/blob/main/images/ab_new_revision_detected.png)
 
-Trace progress. After some time the iteration increases like in the next image
+Trace progress. After some time the iteration increases like in the next image.
 
 ![alt text](https://github.com/dorian1000/clc_flagger_project/blob/main/images/ab_iteration_5.png)
 
-Completed Promotion. The app version is downgraded to 0.0.1
+Completed Promotion. The app version is downgraded to 0.0.1.
 
 ![alt text](https://github.com/dorian1000/clc_flagger_project/blob/main/images/ab_promotion_completed.png)
 
