@@ -24,13 +24,14 @@ https://github.com/istio/istio/releases/tag/1.8.1
 
 ### Download helm
 
+https://github.com/helm/helm/releases
+
 `helm version`
 
 ```
     version.BuildInfo{Version:"v3.5.0-rc.2", GitCommit:"32c22239423b3b4ba6706d450bd044baffdcf9e6", GitTreeState:"clean", GoVersion:"go1.15.6"}
 ```
 
-https://github.com/helm/helm/releases
 
 Add a repository to helm. Flagger is later installed using this helm repository.
 
