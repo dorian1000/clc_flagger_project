@@ -1,14 +1,12 @@
 # clc_flagger_project
 
-The aim of this project is to analyze the progressive delivery Kubernetes operator Flagger and its components. We will create a documentation of deployment steps using service mesh applications, like Istio and Linkerd, and ingress controller, like Contour and Gloo. 
+The aim of this project is to analyze the progressive delivery Kubernetes operator Flagger and its components. We will create a documentation of deployment steps using service mesh applications, like Istio and monitor their performance. 
 
-We will highlight their properties, functionality, pro, cons, and their differences. 
-
-Additionally, we will create a tutorial highlighting their usage. 
+We will create a tutorial highlighting their usage. 
 
 # Setup
 
-### Create a Cluster
+### Cluster erstellen
 
 Create a kubernetes cluster with your cloud of choice (e.g. gce, azure, etc.). We recommend to create a minimum of two nodes in your kubernetes cluster.
 Connect to your cluster via `kubectl get all` and follow the Instructions below.
