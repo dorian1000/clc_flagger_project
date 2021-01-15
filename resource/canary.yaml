@@ -35,9 +35,9 @@ spec:
     interval: 1m
     maxWeight: 50
     metrics:
-    - interval: 1m
-      name: request-success-rate
-      threshold: 99
+    # - interval: 1m
+    #   name: request-success-rate
+    #   threshold: 99
     - interval: 30s
       name: request-duration
       threshold: 500
