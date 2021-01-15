@@ -225,11 +225,11 @@ Connect to the application (see [here](https://github.com/dorian1000/clc_flagger
  
 # Connect to Grafana
 
-![alt text](https://github.com/dorian1000/clc_flagger_project/blob/main/images/ab_promotion_completed.png)
+Find the flagger-grafana service name with `kubectl get svc -n istio-system`
 
-```
-kubectl get svc -n istio-system
-```
+![alt text](https://github.com/dorian1000/clc_flagger_project/blob/main/images/svc.png)
+
+
 
 ```
 kubectl -n istio-system port-forward svc/flagger-grafana 3000:80
