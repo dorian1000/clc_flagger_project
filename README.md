@@ -213,12 +213,21 @@ print the rollout progress. Wait until revision new revision is detected.
 
 ![alt text](https://github.com/dorian1000/clc_flagger_project/blob/main/images/ab_new_revision_detected.png)
 
-Trace progress. After some time the iteration increaes like in the next image
+Trace progress. After some time the iteration increases like in the next image
 
 ![alt text](https://github.com/dorian1000/clc_flagger_project/blob/main/images/ab_iteration_5.png)
 
+Completed Promotion. The app version is downgraded to 0.0.1
 
+![alt text](https://github.com/dorian1000/clc_flagger_project/blob/main/images/ab_promotion_completed.png)
+
+Connect to the application (see #refChatper)
+
+![alt text](https://github.com/dorian1000/clc_flagger_project/blob/main/images/app_v1.png)
+ 
 # Connect to Grafana
+
+![alt text](https://github.com/dorian1000/clc_flagger_project/blob/main/images/ab_promotion_completed.png)
 
 ```
 kubectl get svc -n istio-system

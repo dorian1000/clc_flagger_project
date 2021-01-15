@@ -36,7 +36,7 @@ spec:
     # schedule interval (default 60s)
     interval: 1m
     # total number of iterations
-    iterations: 10
+    iterations: 3
     # max number of failed iterations before rollback
     threshold: 2
     # canary match condition
