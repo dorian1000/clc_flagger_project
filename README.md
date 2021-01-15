@@ -33,16 +33,14 @@ https://github.com/helm/helm/releases
 ```
 
 
-Add a flagger repository to helm. 
+Add a flagger repository to helm. Afterwards you can find the repo in `helm repo list` output
 
 ```
     helm repo add flagger https://flagger.app
 ```
 
-```
-    helm repo list
-```
-    flagger https://flagger.app
+
+
 
 
 ### Install required Services to Kubernetes Cluster
