@@ -163,7 +163,7 @@ Wait..........
 
 ![alt text](https://github.com/dorian1000/clc_flagger_project/blob/main/images/describe_canary_resource_rollout_live_2.png)
 
-## More Information to canary rollout 
+## More Information during canary rollout 
 
 ```
 kubectl get vs initdeployment -n test -o yaml
@@ -171,9 +171,37 @@ kubectl get vs initdeployment -n test -o yaml
 
 ![alt text](https://github.com/dorian1000/clc_flagger_project/blob/main/images/vs_initdeployment.png)
 
-# Connect to primary canary
+# Connect to new version
 
-TBD
+In this chapter we connect to the new version to verify the successfull canary rollout.
+
+Search pod name
+
+```
+kubectl get pods -n test
+```
+
+![alt text](https://github.com/dorian1000/clc_flagger_project/blob/main/images/get_pods_v2_after_canary.png)
+
+Do a port forward 
+
+```
+kubectl port-forward initdeployment-primary-8447855b9f-vjndc 9999:8888 -n test
+```
+
+http://127.0.0.1:9999/
+
+![alt text](https://github.com/dorian1000/clc_flagger_project/blob/main/images/get_pods_v2_after_canary.png)
+
+
+
+
+
+
+
+
+
+
 
 
 
