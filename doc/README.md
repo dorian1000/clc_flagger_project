@@ -12,7 +12,7 @@ When updating an image with the `set image` while being connected to a pod, the 
 
 You cannot do a rollout with pendings pods. This error occurs during the deployment steps
 
-SOLUTION: Increase the number of nodes in your kubernetes cluster.
+**SOLUTION**: Increase the number of nodes in your kubernetes cluster.
 
 ![alt text](https://github.com/dorian1000/clc_flagger_project/blob/main/images/pending_pods.png)
 
@@ -26,6 +26,14 @@ According to flagger Documentation, there are two built in metrics that can be u
 ![alt text](https://github.com/dorian1000/clc_flagger_project/blob/main/images/metric_not_found.png)
 
 ## Hall of fame
+
+We got the error when starting a stopped kubernetes cluster in our azure resource group
+
+```
+az aks start --name myAKSCluster --resource-group myResourceGroup
+```
+
+If you see this red block of code do not panic. We waited for couples of minutes and executed the command again.
 
 ![alt text](https://github.com/dorian1000/clc_flagger_project/blob/main/images/hell.png)
 
