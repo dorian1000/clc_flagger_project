@@ -33,7 +33,7 @@ https://github.com/helm/helm/releases
 ```
 
 
-Add a repository to helm. Flagger is later installed using this helm repository.
+Add a flagger repository to helm. 
 
 ```
     helm repo add flagger https://flagger.app
