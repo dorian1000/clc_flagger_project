@@ -50,7 +50,7 @@ Add a repository to helm. Flagger is later installed using this helm repository.
     kubectl get deployment -n istio-system
 ```
 
-![alt text](https://github.com/[username]/[reponame]/blob/[branch]/deployments_after_setup.jpg?raw=true)
+![alt text](https://github.com/dorian1000/clc_flagger_project/images/deployments_after_setup.png)
 
 # Demo
 
