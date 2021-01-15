@@ -18,8 +18,10 @@ SOLUTION: Increase the number of nodes in your kubernetes cluster.
 
 ## Metrics not found
 
-Acording to flagger Documentation, there are two built in metrics that can be used for monitoring. see https://docs.flagger.app/usage/metrics
+According to flagger Documentation, there are two built in metrics that can be used for monitoring. see https://docs.flagger.app/usage/metrics
 
+* request-success-rate: Uncomment the metric for a successfull rollout. see #refCanary.yaml
+* request-duration: Warnings occur in the event log but the promotion completes successfully.
 
 ![alt text](https://github.com/dorian1000/clc_flagger_project/blob/main/images/metric_not_found.png)
 
