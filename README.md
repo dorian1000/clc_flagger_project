@@ -218,6 +218,27 @@ Trace progress. After some time the iteration increaes like in the next image
 ![alt text](https://github.com/dorian1000/clc_flagger_project/blob/main/images/ab_iteration_5.png)
 
 
+# Connect to Grafana
+
+```
+kubectl get svc -n istio-system
+```
+
+```
+kubectl -n istio-system port-forward svc/flagger-grafana 3000:80
+```
+
+https://localhost:3000
+
+see #refChapter for login credentials
+
+In the Grafana UI. Click `Add new datasource`. You can find the prometheus url with, e.g. 10.0.84.211:9090
+
+```
+kubectl get svc -n istio-system
+```
+
+
 
 
 
