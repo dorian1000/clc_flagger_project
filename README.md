@@ -57,7 +57,7 @@ kubectl apply -f https://raw.githubusercontent.com/istio/istio/release-1.8/sampl
         --set password=change-me
 ```
 
-![alt text](https://github.com/dorian1000/clc_flagger_project/images/deployments_after_setup.png)
+![alt text](https://github.com/dorian1000/clc_flagger_project/blob/main/images/deployments_after_setup.png)
 
 # Demo
 
