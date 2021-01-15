@@ -225,8 +225,6 @@ Connect to the application (see [here](https://github.com/dorian1000/clc_flagger
  
 # Connect to Grafana
 
-![alt text](https://github.com/dorian1000/clc_flagger_project/blob/main/images/ab_promotion_completed.png)
-
 ```
 kubectl get svc -n istio-system
 ```
