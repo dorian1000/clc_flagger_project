@@ -30,13 +30,16 @@ Add a repository to helm. Flagger is later installed using this helm repository.
 
 #### Install Istio
 
+The install command automatically creates a namespace  `istio-system`.
+
 ```source
     istioctl install --set profile=default
 ```
 
 #### Install Prometheus
+
 ```source
-    kubectl apply -f https://raw.githubusercontent.com/istio/istio/release-1.8/samples/addons/prometheus.yaml
+kubectl apply -f https://raw.githubusercontent.com/istio/istio/release-1.8/samples/addons/prometheus.yaml
 ```
 
 #### Install Flagger for Istio in the `istio-system` namespace
@@ -44,13 +47,35 @@ Add a repository to helm. Flagger is later installed using this helm repository.
     kubectl apply -k github.com/fluxcd/flagger//kustomize/istio
 ```
 
-#### 
+#### Install Grafana in the `istio-system` namespace
 
 ```source
-    kubectl get deployment -n istio-system
+    helm upgrade -i flagger-grafana flagger/grafana \
+        --namespace=istio-system \
+        --set url=http://prometheus.istio-system:9090 \
+        --set user=admin \
+        --set password=change-me
 ```
 
-![alt text](https://github.com/[username]/[reponame]/blob/[branch]/deployments_after_setup.jpg?raw=true)
+![alt text](https://github.com/dorian1000/clc_flagger_project/images/deployments_after_setup.png)
 
 # Demo
+
+Create `test` namespace
+
+```source
+    kubectl create ns test
+```
+
+Enable Istio sidecar injection
+
+```source
+    kubectl label namespace test istio-injection=enabled
+```
+
+
+
+
+
+
 
