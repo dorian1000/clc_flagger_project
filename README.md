@@ -10,7 +10,8 @@ Additionally, we will create a tutorial highlighting their usage.
 
 ### Cluster erstellen
 
-Kubernetes Cluster lt. Anleitung in exercise 3.1 erstellen
+Create a kubernetes cluster with your cloud of choice (e.g. gce, azure, etc.). We recommend to create a minimum of two nodes in your kubernetes cluster.
+Connect to your cluster via `kubectl get all` and follow the Instructions below.
 
 ### Download Istio
 
