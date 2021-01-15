@@ -48,7 +48,7 @@ Add a repository to helm. Flagger is later installed using this helm repository.
 
 #### Install Istio
 
-The install command automatically creates a namespace  `istio-system`.
+The install command automatically creates the namespace  `istio-system`.
 
 ```source
     istioctl install --set profile=default
