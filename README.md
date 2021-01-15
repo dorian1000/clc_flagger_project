@@ -222,7 +222,7 @@ Completed Promotion. The app version is downgraded to 0.0.1
 
 ![alt text](https://github.com/dorian1000/clc_flagger_project/blob/main/images/ab_promotion_completed.png)
 
-Connect to the application (see #refChatper)
+Connect to the application (see [here](https://github.com/dorian1000/clc_flagger_project/blob/main/README.md#connect-to-new-version))
 
 ![alt text](https://github.com/dorian1000/clc_flagger_project/blob/main/images/app_v1.png)
  
