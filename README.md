@@ -133,7 +133,7 @@ Check for running pods, if one or more pods are on status pendin see [Learnings]
 
 ![alt text](https://github.com/dorian1000/clc_flagger_project/blob/main/images/pods_ns_test.png)
 
-### Verify Initialization
+#### Verify Initialization
 
 ```souce
     kubectl -n test describe canary/initdeployment
