@@ -157,6 +157,21 @@ In the `describe` one can see the event messages to watch the rollout process of
     kubectl -n test describe canary/initdeployment
 ```
 
+![alt text](https://github.com/dorian1000/clc_flagger_project/blob/main/images/describe_canary_resource_rollout_live.png)
+
+## More Information to canary rollout 
+
+```
+kubectl get vs initdeployment -n test -o yaml
+```
+
+![alt text](https://github.com/dorian1000/clc_flagger_project/blob/main/images/vs_initdeployment.png)
+
+# Connect to primary canary
+
+
+
+
 
 
 
