@@ -8,7 +8,7 @@ Additionally, we will create a tutorial highlighting their usage.
 
 # Setup
 
-### Cluster erstellen
+### Create a Cluster
 
 Create a kubernetes cluster with your cloud of choice (e.g. gce, azure, etc.). We recommend to create a minimum of two nodes in your kubernetes cluster.
 Connect to your cluster via `kubectl get all` and follow the Instructions below.
