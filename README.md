@@ -6,7 +6,7 @@ We will highlight their properties, functionality, pro, cons, and their differen
 
 Additionally, we will create a tutorial highlighting their usage. 
 
-## Setup
+# Setup
 
 ### Cluster erstellen
 
@@ -59,7 +59,7 @@ kubectl apply -f https://raw.githubusercontent.com/istio/istio/release-1.8/sampl
 
 ![alt text](https://github.com/dorian1000/clc_flagger_project/blob/main/images/deployments_after_setup.png)
 
-# Demo
+# Deploy Demo App and Canary Resources
 
 Create `test` namespace
 
@@ -118,9 +118,14 @@ Check for running pods, if one or more pods are on status pendin see #refLearnin
 
 ![alt text](https://github.com/dorian1000/clc_flagger_project/blob/main/images/describe_canary_resource.png)
 
-## Trigger Canary Deployment
+# Canary Deployment
 
-TBW
+To execute a canary deployment, set a new image on your desired resource. This will trigger a canary deployment. Later we´ll see how to read the relevant messages.
+
+```source
+    kubectl -n test set image deployment/initdeployment initdeployment=dorian1000/flagger-demo-app:0.0.2
+```
+
 
 
 
