@@ -195,6 +195,30 @@ http://127.0.0.1:9999/
 
 # A/B Testing
 
+We upgrade our application back to version 1 with A/B Testing
+
+```
+kubectl apply -f canaryAB.yaml -n test
+```
+
+```
+kubectl -n test set image deployment/initdeployment initdeployment=dorian1000/flagger-demo-app:0.0.1                  
+```
+
+print the rollout progress. Wait until revision new revision is detected.
+
+```
+ kubectl -n test describe canary/initdeployment
+```
+
+![alt text](https://github.com/dorian1000/clc_flagger_project/blob/main/images/ab_new_revision_detected.png)
+
+Trace progress. After some time the iteration increaes like in the next image
+
+![alt text](https://github.com/dorian1000/clc_flagger_project/blob/main/images/ab_iteration_5.png)
+
+
+
 
 
 
