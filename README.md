@@ -74,7 +74,7 @@ The install command automatically creates the namespace  `istio-system`.
         --set password=change-me
 ```
 
-Verify installed services in the `istio-system` namespace.
+#### Verify installed services in the `istio-system` namespace
 
 ```
     kubectl get deploy -n istio-system
