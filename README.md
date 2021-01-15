@@ -61,7 +61,6 @@ kubectl apply -f https://raw.githubusercontent.com/istio/istio/release-1.8/sampl
 
 # Demo
 
-## New Namespace
 Create `test` namespace
 
 ```source
@@ -73,41 +72,6 @@ Enable Istio sidecar injection
 ```source
     kubectl label namespace test istio-injection=enabled
 ```
-
-## Apply Resource files
-
-```source
-    kubectl apply -f deployment.yaml -n test
-
-    kubectl apply -f hpa.yaml -n test
-```
-
-## Load Tester
-
-Service to generate request during canary analysis
-```source
-    kubectl apply -k https://github.com/fluxcd/flagger//kustomize/tester?ref=main
-```
-
-## Apply Custom Canary Resource
-
-```source
-    kubectl apply -f canary.yaml -n test
-```
-
-## Verify deployments
-
-```source
-    kubectl get deployments -n test
-```
-
-
-
-
-
-
-
-
 
 
 
