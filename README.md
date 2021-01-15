@@ -84,13 +84,13 @@ The install command automatically creates the namespace  `istio-system`.
 
 # Deploy Demo App and Canary Resources
 
-Create `test` namespace.
+#### Create `test` namespace
 
 ```source
     kubectl create ns test
 ```
 
-Enable Istio sidecar injection.
+#### Enable Istio sidecar injection
 
 ```source
     kubectl label namespace test istio-injection=enabled
@@ -106,7 +106,7 @@ Enable Istio sidecar injection.
 
 ## Load Tester
 
-Service to generate request during canary analysis.
+#### Service to generate request during canary analysis
 ```source
     kubectl apply -k https://github.com/fluxcd/flagger//kustomize/tester?ref=main
 ```
