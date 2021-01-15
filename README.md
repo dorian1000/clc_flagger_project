@@ -8,23 +8,23 @@ Additionally, we will create a tutorial highlighting their usage.
 
 # Setup
 
-##Cluster erstellen
+## Cluster erstellen
 
 Kubernetes Cluster lt. Anleitung in exercise 3.1 erstellen
 
-##Download Istio
+## Download Istio
 
-##Download helm
+## Download helm
 
-##Install Flagger & Grafana
+## Install Flagger & Grafana
 
 https://docs.flagger.app/install/flagger-install-on-kubernetes
 
-##Install Istio
+## Install Istio
 
 https://docs.flagger.app/tutorials/istio-progressive-delivery
 
-##Prerequisites
+## Prerequisites
 
 ```source
     istioctl manifest install --set profile=default
