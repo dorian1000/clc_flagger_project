@@ -96,7 +96,7 @@ The install command automatically creates the namespace  `istio-system`.
     kubectl label namespace test istio-injection=enabled
 ```
 
-## Apply Resource files
+####  Apply Resource files
 
 ```source
     kubectl apply -f deployment.yaml -n test
@@ -104,20 +104,20 @@ The install command automatically creates the namespace  `istio-system`.
     kubectl apply -f hpa.yaml -n test
 ```
 
-## Load Tester
+####  Load Tester
 
-#### Service to generate request during canary analysis
+Service to generate request during canary analysis
 ```source
     kubectl apply -k https://github.com/fluxcd/flagger//kustomize/tester?ref=main
 ```
 
-## Apply Custom Canary Resource
+#### Apply Custom Canary Resource
 
 ```source
     kubectl apply -f canary.yaml -n test
 ```
 
-### Verify deployments & pods
+#### Verify deployments & pods
 
 ```source
     kubectl get deployments -n test
@@ -133,7 +133,7 @@ Check for running pods, if one or more pods are on status pendin see [Learnings]
 
 ![alt text](https://github.com/dorian1000/clc_flagger_project/blob/main/images/pods_ns_test.png)
 
-### Verify Initialization
+#### Verify Initialization
 
 ```souce
     kubectl -n test describe canary/initdeployment
@@ -173,7 +173,7 @@ kubectl get vs initdeployment -n test -o yaml
 
 In this chapter we connect to the new version to verify the successfull canary rollout.
 
-Search pod name
+#### Search pod name
 
 ```
 kubectl get pods -n test
@@ -181,7 +181,7 @@ kubectl get pods -n test
 
 ![alt text](https://github.com/dorian1000/clc_flagger_project/blob/main/images/get_pods_v2_after_canary.png)
 
-Do a port forward 
+#### Do a port forward 
 
 ```
 kubectl port-forward initdeployment-primary-8447855b9f-vjndc 9999:8888 -n test
@@ -203,7 +203,7 @@ kubectl apply -f canaryAB.yaml -n test
 kubectl -n test set image deployment/initdeployment initdeployment=dorian1000/flagger-demo-app:0.0.1                  
 ```
 
-print the rollout progress. Wait until revision new revision is detected.
+Print the rollout progress. Wait until new revision is detected.
 
 ```
  kubectl -n test describe canary/initdeployment
