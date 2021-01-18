@@ -2,6 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: initdeployment
+  labels:
+    app: initdeployment
 spec:
   selector:
     matchLabels:
@@ -10,7 +12,7 @@ spec:
     metadata:
       annotations:
         prometheus.io/scrape: "true"
-        prometheus.io/port: "9899"
+        prometheus.io/port: "9090"
       labels:
         app: initdeployment
     spec:
@@ -18,5 +20,6 @@ spec:
       - name: initdeployment
         image: dorian1000/flagger-demo-app:0.0.1
         ports:
-        - containerPort: 8080
-
+        - name: http
+          containerPort: 8888
+          protocol: TCP
