@@ -9,43 +9,42 @@ spec:
     apiVersion: apps/v1
     kind: Deployment
     name: initdeployment
-  # the maximum time in seconds for the canary deployment
-  # to make progress before it is rollback (default 600s)
   progressDeadlineSeconds: 60
-  # HPA reference (optional)
   autoscalerRef:
     apiVersion: autoscaling/v2beta2
     kind: HorizontalPodAutoscaler
     name: initdeployment
   service:
+    port: 80
+    targetPort: 8888
+    portDiscovery: true
+    portName: http
     gateways:
     - public-gateway.istio-system.svc.cluster.local
-    hosts:
-    - '*'
-    port: 80
+    - mesh
     retries:
       attempts: 3
       perTryTimeout: 1s
       retryOn: gateway-error,connect-failure,refused-stream
-    targetPort: 9999
     trafficPolicy:
       tls:
         mode: ISTIO_MUTUAL
   analysis:
-    interval: 1m
-    maxWeight: 50
+    interval: 30s
+    maxWeight: 40
     metrics:
-    - interval: 1m
+    - interval: 30s
       name: request-success-rate
       threshold: 99
     - interval: 30s
       name: request-duration
       threshold: 500
-    stepWeight: 10
+    stepWeight: 20
     threshold: 5
     webhooks:
-    - metadata:
-        cmd: hey -z 1m -q 10 -c 2 http://initdeployment-canary.test:80/
-      name: load-test
+    - name: load-test
       timeout: 5s
       url: http://flagger-loadtester.test/
+      metadata:
+        cmd: hey -z 30s -q 10 -c 2 http://initdeployment.test:80/
+
